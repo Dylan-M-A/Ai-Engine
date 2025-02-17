@@ -23,7 +23,8 @@ Actor::Actor(float x, float y, const char* name = "Actor")
     m_name = name;
 }
 
-Component* Actor::getComponent(const char* componentName)
+template<typename T>
+inline Component* Actor::getComponent(T* componentName)
 {
     //Iterate through all of the components in the array.
     for (int i = 0; i < m_componentCount; i++)
@@ -74,7 +75,8 @@ Component* Actor::addComponent(Component* component)
     return component;
 }
 
-bool Actor::removeComponent(const char* componentName)
+template<typename T>
+bool Actor::removeComponent(T* componentName)
 {
     //If the component name is null..
     if (!componentName)

@@ -46,9 +46,12 @@ public:
     /// <param name="componentName">The name of the component to search for.</param>
     /// <returns>A pointer to the component if a match was found.
     /// Returns nullptr if a match wasn't found.</returns>
-    Component* getComponent(const char* componentName);
+    template<typename T>
+    Component* getComponent(T* componentName);
     Component* addComponent(Component* component);
-    bool removeComponent(const char* componentName);
+
+    template<typename T>
+    bool removeComponent(T* componentName);
 
     /// <summary>
     /// Called during the first update after an actor is added to a scene.
@@ -98,4 +101,3 @@ private:
     Component** m_components;
     int m_componentCount;
 };
-
