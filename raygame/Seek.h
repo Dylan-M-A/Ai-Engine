@@ -8,7 +8,8 @@ public:
 	Seek();
 	~Seek();
 
-	
+	DesiredVelocity();
+	SteeringForce();
 
 private:
 

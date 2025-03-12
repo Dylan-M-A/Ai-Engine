@@ -170,17 +170,9 @@ inline void DynamicArray<T>::Insert(int index, const T* array, int size)
 }
 
 template<typename T>
-inline void DynamicArray<T>::Insert(int index, const T* array, int size)
+void DynamicArray<T>::Insert(int index, const DynamicArray<T>& other)
 {
-	Resize(m_length + other.m_length);
-	for (int i = m_length - 1; i >= index + other.m_length; i--)
-	{
-		m_array[i] = m_array[i - other.m_length];
-	}
-	for (int i = 0; i < other.m_length; i++)
-	{
-		m_array[index + i] = other.m_array[i];
-	}
+
 }
 
 template<typename T>

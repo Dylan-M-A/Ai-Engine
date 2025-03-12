@@ -8,6 +8,9 @@ public:
 	Flee();
 	~Flee();
 
+	DesiredVelocity();
+	SteeringForce();
+
 private:
 
 };

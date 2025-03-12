@@ -8,6 +8,9 @@ public:
 	Wander();
 	~Wander();
 
+	DesiredVelocity();
+	SteeringForce();
+
 private:
 
 };

@@ -8,6 +8,9 @@ public:
 	Pursue();
 	~Pursue();
 
+	DesiredVelocity();
+	SteeringForce();
+
 private:
 
 };

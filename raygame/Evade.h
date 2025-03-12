@@ -8,6 +8,9 @@ public:
 	Evade();
 	~Evade();
 
+	DesiredVelocity();
+	SteeringForce();
+
 private:
 
 };

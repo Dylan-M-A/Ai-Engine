@@ -8,6 +8,9 @@ public:
 	Arrive();
 	~Arrive();
 
+	DesiredVelocity();
+	SteeringForce();
+
 private:
 
 };

@@ -1,37 +1,36 @@
 #pragma once
 #include "raylib.h"
-#include "List/List.h"
+#include <vector>
+#include <algorithm>
 
-namespace Pathfinding
-{
+namespace pathfinding {
 	struct Node;
 
-	struct Edge
-	{
-		Edge() : target(nullptr), cost(1) {}
-		Edge(Node* target, float cost) : target(target), cost(cost) {}
+	struct Edge {
+		Edge() { target = nullptr; cost = 0; }
+		Edge(Node* _target, float _cost) : target(_target), cost(_cost) {}
 
 		Node* target;
 		float cost;
 	};
 
-	struct Node
-	{
-		Node() : position(Vector2()), gScore(0), previous(nullptr), connections(List<Edge>()) {}
-		Node(float x, float y) : position({ x, y }), gScore(0), previous(nullptr), connections(List<Edge>()) {}
+	struct Node {
+
+		Node() {}
+		Node(float x, float y) { position.x = x; position.y = y; gScore = 0; previous = nullptr; }
 
 		Vector2 position;
 
 		float gScore;
 		Node* previous;
 
-		List<Edge> connections;
+		std::vector<Edge> connections;
 
 		void ConnectTo(Node* other, float cost);
 	};
 
-	List<Node*> DijkstrasSearch(Node* startNode, Node* endNode);
-	void DrawPath(List<Node*>& path, Color lineColor);
+	std::vector<Node*> DijkstrasSearch(Node* startNode, Node* endNode);
+	void DrawPath(std::vector<Node*>& path, Color lineColor);
 	void DrawNode(Node* node, bool selected = false);
-	void DrawGraph(Node* node, List<Node*>* drawnList);
+	void DrawGraph(Node* node, std::vector<Node*>* drawnList);
 }
