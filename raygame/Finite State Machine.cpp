@@ -1,0 +1,7 @@
+enum State
+{
+	STATE_STANDING,
+	STATE_JUMPING,
+	STATE_DUCKING
+};
+
