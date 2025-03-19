@@ -1,16 +1,16 @@
 #pragma once
+#include "Behaviour.h"
 class Component;
 
-template<typename T>
 class Seek
 {
 public:
 	Seek();
-	~Seek();
+	virtual ~Seek() {};
 
-	DesiredVelocity();
-	SteeringForce();
+	virtual bool Update(Agent* agent, float deltaTime);
+	void SetDestination(Vector2 destination) { m_destination = destination; }
 
 private:
-
+	Vector2 m_destination;
 };

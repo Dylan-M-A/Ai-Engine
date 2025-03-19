@@ -1,16 +1,17 @@
 #pragma once
+#include "Behaviour.h"
 class Component;
 
-template<typename T>
 class Flee
 {
 public:
 	Flee();
-	~Flee();
+	virtual ~Flee() {};
 
-	DesiredVelocity();
-	SteeringForce();
+	virtual bool Update(Agent* agent, float deltaTime);
+	void SetDestination(Vector2 destination) { m_destination = destination; }
 
 private:
-
+	Vector2 m_destination;
+	float m_fleeRadius = 100;
 };
