@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-namespace pathfinding {
+namespace Pathfinding {
 	struct Node;
 
 	struct Edge {
@@ -22,6 +22,8 @@ namespace pathfinding {
 		Vector2 position;
 
 		float gScore;
+		float heuristic;
+		float finalScore;
 		Node* previous;
 
 		std::vector<Edge> connections;
@@ -33,4 +35,6 @@ namespace pathfinding {
 	void DrawPath(std::vector<Node*>& path, Color lineColor);
 	void DrawNode(Node* node, bool selected = false);
 	void DrawGraph(Node* node, std::vector<Node*>* drawnList);
+
+	std::vector<Node*> AStarSearch(Node* startNode, Node* endNode);
 }

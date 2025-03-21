@@ -3,7 +3,7 @@
 #include "pathfinding.h"
 #include <vector>
 
-namespace pathfinding
+namespace Pathfinding
 {
 	class PathAgent
 	{

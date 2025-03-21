@@ -1,6 +1,6 @@
 #include "PathAgent.h"
 
-namespace pathfinding
+namespace Pathfinding
 {
     void PathAgent::SetNode(Node* node)
     {

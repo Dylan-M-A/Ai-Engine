@@ -46,5 +46,3 @@ protected:
 
 	Vector2 m_force = { 0, 0 };
 };
-
-
