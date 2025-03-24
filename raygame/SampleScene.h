@@ -12,6 +12,6 @@ public:
     void end() override;
 
 private:
-    pathfinding::NodeMap m_nodeMap;
-    pathfinding::PathAgent* m_pathAgent;
+    Pathfinding::NodeMap m_nodeMap;
+    Pathfinding::PathAgent* m_pathAgent;
 };

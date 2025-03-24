@@ -2,7 +2,7 @@
 #include <string>
 #include "pathfinding.h"
 
-namespace pathfinding
+namespace Pathfinding
 {
 	// class that represents the nodes on a map, shared between all Pathfind objects
 	// this data is initialised and startup and doesn't change at runtime

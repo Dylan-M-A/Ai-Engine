@@ -20,7 +20,7 @@ void SampleScene::start()
 		asciiMap.push_back("000000000000");
 		m_nodeMap.Initialise(asciiMap);
 
-		m_pathAgent = new pathfinding::PathAgent();
+		m_pathAgent = new Pathfinding::PathAgent();
 		m_pathAgent->SetNode(m_nodeMap.GetNode(1, 1));
 		m_pathAgent->speed = 64;
 }
@@ -37,7 +37,7 @@ void SampleScene::update(float deltaTime)
 	if (IsMouseButtonPressed(0))
 	{
 		Vector2 mousePos = GetMousePosition();
-		pathfinding::Node* endNode = m_nodeMap.GetClosestNode(mousePos);
+		Pathfinding::Node* endNode = m_nodeMap.GetClosestNode(mousePos);
 		m_pathAgent->GoToNode(endNode);
 	}
 
