@@ -4,6 +4,7 @@
 #include "SampleScene.h"
 #include "DynamicArray.h"
 #include "Actor.h"
+#include "AStarTest.h"
 
 bool Engine::m_applicationShouldClose = false;
 Scene** Engine::m_scenes = new Scene*;
@@ -24,7 +25,7 @@ Engine::Engine()
 void Engine::start()
 {
 	//Initialize window
-	int screenWidth = 700;
+	int screenWidth = 1000;
 	int screenHeight = 800;
 	InitWindow(screenWidth, screenHeight, "Intro To C++");
 	SetTargetFPS(0);
@@ -32,6 +33,11 @@ void Engine::start()
 	//Start the scene
 	m_currentSceneIndex = addScene(new SampleScene());
 	m_scenes[m_currentSceneIndex]->start();
+
+	m_currentSceneIndex = addScene(new AStarTest());
+	m_scenes[m_currentSceneIndex]->start();
+
+	m_currentSceneIndex = 1;
 }
 
 void Engine::update(float deltaTime)

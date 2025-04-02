@@ -35,13 +35,14 @@ namespace Pathfinding {
 		{
 			return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 		}
+
 	};
-
-
 	std::vector<Node*> DijkstrasSearch(Node* startNode, Node* endNode);
 	void DrawPath(std::vector<Node*>& path, Color lineColor);
 	void DrawNode(Node* node, bool selected = false);
 	void DrawGraph(Node* node, std::vector<Node*>* drawnList);
 
 	std::vector<Node*> AStarSearch(Node* startNode, Node* endNode);
+
+
 }

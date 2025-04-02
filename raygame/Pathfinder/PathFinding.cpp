@@ -11,9 +11,9 @@ namespace Pathfinding
 		return (i->gScore < j->gScore); 
 	}
 
-	bool FinalSort(Node* i, Node* j, Node* f)
+	bool FinalSort(Node* i, Node* j)
 	{
-		return (i->gScore < j->heuristic < f->finalScore);
+		return (i->finalScore < j->finalScore);
 	}
 
 	void Node::ConnectTo(Node* other, float cost)
@@ -228,7 +228,7 @@ namespace Pathfinding
 				if (std::find(openList.begin(), openList.end(), e.target) == openList.end()) {
 					//Calculate the target node's G Score
 					e.target->gScore = currentNode->gScore + e.cost;
-					e.target->heuristic = currentNode->distance();
+					e.target->heuristic = currentNode->distance(e.target->position.x, e.target->position.y, currentNode->position.x, currentNode->position.y);
 					e.target->finalScore = e.target->gScore + e.target->heuristic;
 					//Set the target node's previous to currentNode
 					e.target->previous = currentNode;

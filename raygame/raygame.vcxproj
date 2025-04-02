@@ -150,6 +150,7 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="Arrive.cpp" />
+    <ClCompile Include="AStarTest.cpp" />
     <ClCompile Include="Behavior.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
@@ -170,6 +171,7 @@
     <ClCompile Include="Selector.cpp" />
     <ClCompile Include="Sequence.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
+    <ClCompile Include="State.cpp" />
     <ClCompile Include="SteeringTest.cpp" />
     <ClCompile Include="Transform2D.cpp" />
     <ClCompile Include="Wander.cpp" />
@@ -179,6 +181,7 @@
     <ClInclude Include="Actor.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="Arrive.h" />
+    <ClInclude Include="AStarTest.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />

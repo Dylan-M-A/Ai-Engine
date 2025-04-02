@@ -95,6 +95,12 @@
     <ClCompile Include="SteeringTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AStarTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h">
@@ -188,6 +194,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Condition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AStarTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
