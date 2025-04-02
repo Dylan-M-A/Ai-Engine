@@ -29,7 +29,14 @@ namespace Pathfinding {
 		std::vector<Edge> connections;
 
 		void ConnectTo(Node* other, float cost);
+
+		// Function to calculate distance
+		float distance(int x1, int y1, int x2, int y2) 
+		{
+			return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+		}
 	};
+
 
 	std::vector<Node*> DijkstrasSearch(Node* startNode, Node* endNode);
 	void DrawPath(std::vector<Node*>& path, Color lineColor);
