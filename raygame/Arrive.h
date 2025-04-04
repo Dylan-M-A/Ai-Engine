@@ -2,13 +2,13 @@
 #include "Behaviour.h"
 class Component;
 
-class Arrive
+class Arrive : public Behaviour
 {
 public:
 	Arrive();
 	virtual ~Arrive() {};
 
-	virtual bool Update(Agent* agent, float deltaTime);
+	virtual bool Update(Agent* agent, float deltaTime) override;
 	void SetDestination(Vector2 destination) { m_destination = destination; }
 
 private:

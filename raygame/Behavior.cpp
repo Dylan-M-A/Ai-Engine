@@ -1,17 +1,20 @@
 #include "Behaviour.h"
 
-Status Behaviour::tick(Agent* agent, float deltaTime)
+namespace DecisionTree
 {
-    if (m_eStatus != BH_RUNNING)
+    Status Behaviour::tick(Agent* agent, float deltaTime)
     {
-        onInitialize();
+        if (m_eStatus != BH_RUNNING)
+        {
+            onInitialize();
+        }
+    
+        m_eStatus = update(agent, deltaTime);
+    
+        if (m_eStatus != BH_RUNNING)
+        {
+            onTerminate(m_eStatus);
+        }
+        return m_eStatus;
     }
-
-    m_eStatus = update(agent, deltaTime);
-
-    if (m_eStatus != BH_RUNNING)
-    {
-        onTerminate(m_eStatus);
-    }
-    return m_eStatus;
 }
