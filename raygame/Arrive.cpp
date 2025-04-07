@@ -1,5 +1,9 @@
 #include "Arrive.h"
 
+Arrive::Arrive()
+{
+}
+
 bool Arrive::Update(Agent* agent, float deltaTime)
 {
 	Vector2 desiredVelocity = Vector2Subtract(m_destination, agent->GetPosition());

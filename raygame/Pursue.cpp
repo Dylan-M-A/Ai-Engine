@@ -1,5 +1,9 @@
 #include "Pursue.h"
 
+Pursue::Pursue()
+{
+}
+
 bool Pursue::Update(Agent* agent, float deltaTime)
 {
 	Vector2 j = Vector2Add(m_destination, m_position);

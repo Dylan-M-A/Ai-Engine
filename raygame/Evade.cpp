@@ -1,5 +1,9 @@
 #include "Evade.h"
 
+Evade::Evade()
+{
+}
+
 bool Evade::Update(Agent* agent, float deltaTime)
 {
 	Vector2 j = Vector2Add(m_position, m_destination);

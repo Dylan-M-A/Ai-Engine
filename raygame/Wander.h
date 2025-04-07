@@ -2,13 +2,13 @@
 #include "Behaviour.h"
 class Component;
 
-class Wander
+class Wander : public Behaviour
 {
 public:
 	Wander();
 	virtual ~Wander() {};
 
-	virtual bool Update(Agent* agent, float deltaTime);
+	virtual bool Update(Agent* agent, float deltaTime) override;
 
 	void Draw(Agent* agent);	// for debug only
 

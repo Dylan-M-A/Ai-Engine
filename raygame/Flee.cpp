@@ -1,5 +1,9 @@
 #include "Flee.h"
 
+Flee::Flee()
+{
+}
+
 bool Flee::Update(Agent* agent, float deltaTime)
 {
 	Vector2 v = Vector2Subtract(agent->GetPosition(), m_destination);

@@ -1,5 +1,9 @@
 #include "Seek.h"
 
+Seek::Seek()
+{
+}
+
 bool Seek::Update(Agent* agent, float deltaTime)
 {
 	Vector2 v = Vector2Subtract(m_destination, agent->GetPosition());
