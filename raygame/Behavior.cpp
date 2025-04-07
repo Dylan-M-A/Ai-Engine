@@ -17,4 +17,22 @@ namespace DecisionTree
         }
         return m_eStatus;
     }
+    void Behaviour::reset()
+    {
+    }
+    void Behaviour::abort()
+    {
+    }
+    bool Behaviour::isTerminated() const
+    {
+        return false;
+    }
+    bool Behaviour::isRunning() const
+    {
+        return false;
+    }
+    Status Behaviour::getStatus() const
+    {
+        return Status();
+    }
 }

@@ -6,6 +6,10 @@ Agent::Agent()
 
 }
 
+Agent::Agent(int, int)
+{
+}
+
 Agent::~Agent()
 {
 

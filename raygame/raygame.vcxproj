@@ -152,6 +152,7 @@
     <ClCompile Include="Arrive.cpp" />
     <ClCompile Include="AStarTest.cpp" />
     <ClCompile Include="Behavior.cpp" />
+    <ClCompile Include="BehaviorTree.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -208,6 +209,7 @@
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Transform2D.h" />
+    <ClInclude Include="TreeBehaviors.h" />
     <ClInclude Include="Wander.h" />
   </ItemGroup>
   <ItemGroup>
