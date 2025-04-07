@@ -1,81 +1,40 @@
-# raygame - sample project
+# Raygame - steering project
 
-This is a sample C++ project setup with [raylib][raylib] for Visual
-Studio 2019. Raylib is a simple game programming framework that is designed to
-be friendly to beginners. It is created by [Ramon Santamaria
-(@raysan5)][raysan].
+This is a project that showcases the ability of steering behaviors
+along with A-star and dijkstras search. It also incorperates finite
+state machine and decision tree to show off there abilities.
 
-This version is compatible with any documentation referring to Raylib 3.0.
+This does use raylib to enhance its capabilites.
 
-It is primarily intended for use by students in the Game Programming course at
-the Seattle Campus of the Academy of Interactive Entertainment.
+There are six sterring behaviors that the users should know of. They
+are arrive, flee, evade, pursue, seek, and wander. Each one of them is similar
+in how they are coded with wander being the most different one. Arrive allows the AI
+to slow down as it approaches the target. Flee makes it so they will flee from the
+position that is marked. Evade does the same thing while incorperating a
+position stat to allow for smarter evading. Pursue will continue to follow and not
+stop until it is on top of the location. Seek will also follow until it is on top the
+location, but also intergrates position for smarter detection. Wander is where the AI
+will have a line of sight that it will just wander around with.
 
-[raylib]:https://github.com/raysan5/raylib
-[raysan]:https://github.com/raysan5
+Finite State Machine is an agent, (a more organized actor class), which can implement
+actions that the AI will be able to do. They are simple but important action.
+Examples include walking, running, ducking, and jumping.
 
-## Getting Started
+Dijkstra's search is a engine that searches for a dot planted on a map.
+It uses g-score to calculate the amount of time it would take to get
+to the destination in the shortest time. G-score is the time cost of 
+going to a different node.
 
-To get started with this sample project, click the _Use this template_ button
-up top to copy this repository to your own account. Then, follow the
-instructions in the [Building](#building) section below.
+A-star search is like dijkstra's, but it doesn't use g-acore. It uses 
+f-score or final score to calculate the fastest way to get to the 
+destination. Final score uses g-score and heuristic to get the score.
+Heuristic is the distance formula or Manhattan distance formula. The 
+second one allows for more accurate measurements.
 
-Once you've got it working, check out the cheatsheet for more information on
-the Raylib API or browse the example projects.
+Decision tree is a decision making strategy that can be used instead
+of finite state machine. They use yes or no questions to come to a quick
+answer. The questions are know as branches and the answers are leaves.
+The only downside is you can only use yes or no questions which limits
+the questions you can use.
 
-**raylib links** - [website][rl-website] / [discord][rl-discord] / [reddit][rl-reddit] / [raylib repo][rl-repo] / [api reference][rl-cheatsheet], [examples][rl-examples]
-
-[rl-website]:https://www.raylib.com/
-[rl-discord]:https://discord.gg/VkzNHUE
-[rl-reddit]:https://www.reddit.com/r/raylib/
-[rl-repo]:https://github.com/raysan5/raylib/tree/3.0.0
-[rl-cheatsheet]:https://www.raylib.com/cheatsheet/cheatsheet.html
-[rl-examples]:https://www.raylib.com/examples.html
-[rl-examples-repo]:https://github.com/raysan5/raylib/tree/3.0.0/examples
-[rl-cs-bindings]:https://github.com/ChrisDill/Raylib-cs
-[rl-cs-bindings-ref]:https://github.com/ChrisDill/Raylib-cs/blob/master/Raylib-cs/Raylib.cs
-[rl-cs-examples]:https://github.com/ChrisDill/Raylib-cs-Examples
-
-## Building
-
-This project supports by **Visual Studio 2019** or newer.
-
-> **Property**          | **Value**
-> ----------------------|--------------------------------
-> Windows SDK Version   | 10.0 (latest installed version)
-> Platform Toolset      | Visual Studio 2019 (v142)
-> C++ Language Standard | ISO C++14 Standard (std:c++14)
-
-When building, please make sure that your installation of Visual Studio has
-the necessary components to compile this project, per the table above. If
-you get any errors, consult the table above and refer to [Microsoft Docs][msft-modify]
-to learn how to configure your installation appropriately.
-
-[msft-modify]:https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019
-
-Clone the repository and open the solution in Visual Studio. Both the solution
-and project should already be configured and ready to start working with. To
-test this, build and run the provided sample project.
-
-![A screenshot of the included sample project](.github/raygame.png)
-
-The sample project that is provided is the [basic window example][basicexample]
-from raylib. Further examples can be found in its [repository][rl-examples-repo]
-or on the [website][rl-examples].
-
-You can review the [cheatsheet][rl-cheatsheet] for the full range of functions made
-available through raylib.
-
-[basicexample]:https://github.com/raysan5/raylib/tree/3.0.0/examples/core/core_basic_window.cpp
-[rayexamplesite]:https://www.raylib.com/examples.html
-
-## License
-
-MIT License - Copyright (c) 2018-2020 Academy of Interactive Entertainment
-
-For more information, see the [license][lic] file.
-
-Third party works are attributed under [thirdparty.md][3p].
-
-[lic]:license.md
-[3p]:thirdparty.md
-[raylib]:https://github.com/raysan5/raylib
+These are all the classes implemented into Raygame.
