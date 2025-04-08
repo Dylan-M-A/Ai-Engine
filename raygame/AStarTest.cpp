@@ -45,7 +45,7 @@ void AStarTest::update(float deltaTime)
 	Color lineColor = { 255, 255, 255, 255 };
 
 	m_nodeMap.Draw(true);
-	DrawPath(m_pathAgent->path, lineColor);
+	Pathfinding::DrawPath(m_pathAgent->path, lineColor);
 
 	// read mouseclicks, left for start node, end for right node
 	if (IsMouseButtonPressed(0))

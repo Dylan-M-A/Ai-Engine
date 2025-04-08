@@ -12,7 +12,7 @@ Vector2 Wander::SetAngle(Vector2 vector, float value)
 	return { cosf(value) * length, sinf(value) * length };
 }
 
-bool Wander::Update(Agent* agent, float deltaTime)
+bool Wander::Update(Default::Agent* agent, float deltaTime)
 {
 	Vector2 velocity = agent->GetVelocity();
 	if (Vector2Length(velocity) == 0)
@@ -49,7 +49,7 @@ bool Wander::Update(Agent* agent, float deltaTime)
 }
 
 /// DEBUG ONLY
-void Wander::Draw(Agent* agent)
+void Wander::Draw(Default::Agent* agent)
 {
 	DrawCircle(debug_cirleCenter.x, debug_cirleCenter.y, m_circleRadius, BLUE);
 	DrawLine(debug_cirleCenter.x, debug_cirleCenter.y,

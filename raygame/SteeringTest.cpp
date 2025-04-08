@@ -7,11 +7,14 @@
 #include "Seek.h"
 #include "Wander.h"
 #include "Finite State Machine.h"
+#include "SteeringTest.h"
 
 class Scene;
 
-void Start()
+void SteeringTest::start()
 {
+	Scene::start();
+
 	int screenWidth = 800;
 	int screenHeight = 450;
 
@@ -19,34 +22,34 @@ void Start()
 
 	Vector2 target = { (float)(screenWidth >> 1), (float)(screenHeight >> 1) };
 
-	Agent* arrive = new Agent();
+	Default::Agent* arrive = new Default::Agent();
 	Arrive* arriveBehavior = new Arrive();
 	arriveBehavior->SetDestination(target);
 	arrive->AddBehaviour(arriveBehavior);
 
-	Agent* evade = new Agent();
+	Default::Agent* evade = new Default::Agent();
 	Evade* evadeBehavior = new Evade();
 	evadeBehavior->SetDestination(target);
 	evade->AddBehaviour(evadeBehavior);
 	
-	Agent* flee = new Agent();
+	Default::Agent* flee = new Default::Agent();
 	flee->SetPosition({ (float)(screenWidth >> 1), (float)(screenHeight >> 1) });
 	Flee* fleeBehavior = new Flee();
 	fleeBehavior->SetDestination(target);
 	flee->AddBehaviour(fleeBehavior);
 	
-	Agent* pursue = new Agent();
+	Default::Agent* pursue = new Default::Agent();
 	pursue->SetPosition({ (float)(screenWidth >> 1), (float)(screenHeight >> 1) });
 	Pursue* pursueBehavior = new Pursue();
 	pursueBehavior->SetDestination(target);
 	pursue->AddBehaviour(pursueBehavior);
 	
-	Agent* seek = new Agent();
+	Default::Agent* seek = new Default::Agent();
 	Seek* seekBehavior = new Seek();
 	seekBehavior->SetDestination(target);
 	seek->AddBehaviour(seekBehavior);
 	
-	Agent* wander = new Agent();
+	Default::Agent* wander = new Default::Agent();
 	wander->SetPosition({ (float)(screenWidth >> 1), (float)(screenHeight >> 1) });
 	wander->SetMaxSpeed(50);
 	Wander* wanderBehavior = new Wander();
@@ -144,4 +147,8 @@ void Start()
 	delete arrive;
 
 	CloseWindow();
+}
+
+void SteeringTest::update(float deltaTime)
+{
 }

@@ -4,7 +4,7 @@ Arrive::Arrive()
 {
 }
 
-bool Arrive::Update(Agent* agent, float deltaTime)
+bool Arrive::Update(Default::Agent* agent, float deltaTime)
 {
 	Vector2 desiredVelocity = Vector2Subtract(m_destination, agent->GetPosition());
 	float distance = Vector2Length(desiredVelocity);

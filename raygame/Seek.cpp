@@ -4,7 +4,7 @@ Seek::Seek()
 {
 }
 
-bool Seek::Update(Agent* agent, float deltaTime)
+bool Seek::Update(Default::Agent* agent, float deltaTime)
 {
 	Vector2 v = Vector2Subtract(m_destination, agent->GetPosition());
 

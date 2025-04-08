@@ -4,7 +4,7 @@ Flee::Flee()
 {
 }
 
-bool Flee::Update(Agent* agent, float deltaTime)
+bool Flee::Update(Default::Agent* agent, float deltaTime)
 {
 	Vector2 v = Vector2Subtract(agent->GetPosition(), m_destination);
 

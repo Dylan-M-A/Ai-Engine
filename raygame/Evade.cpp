@@ -4,7 +4,7 @@ Evade::Evade()
 {
 }
 
-bool Evade::Update(Agent* agent, float deltaTime)
+bool Evade::Update(Default::Agent* agent, float deltaTime)
 {
 	Vector2 j = Vector2Add(m_position, m_destination);
 	Vector2 v = Vector2Subtract(agent->GetPosition(), j);

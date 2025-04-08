@@ -1,23 +1,26 @@
 #pragma once
 #include "Agent.h"
 
-class Behaviour
+namespace Default
 {
-public:
+	class Behaviour
+	{
+	public:
 
-	// empty constructors and destructors for base class
-	Behaviour() {}
-	virtual ~Behaviour() {}
+		// empty constructors and destructors for base class
+		Behaviour() {}
+		virtual ~Behaviour() {}
 
-	// pure virtual function for executing the behaviour
-	virtual bool Update(Agent* agent, float deltaTime) = 0;
-};
+		// pure virtual function for executing the behaviour
+		virtual bool Update(Agent* agent, float deltaTime) = 0;
+	};
+}
 
 namespace AIForGames
 {
 	class Behaviour
 	{
-
+	public:
 		virtual void Enter(Agent* agent) {}
 		virtual void Update(Agent* agent, float deltaTime) = 0;
 		virtual void Exit(Agent* agent) {}

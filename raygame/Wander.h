@@ -2,15 +2,15 @@
 #include "Behaviour.h"
 class Component;
 
-class Wander : public Behaviour
+class Wander : public Default::Behaviour
 {
 public:
 	Wander();
 	virtual ~Wander() {};
 
-	virtual bool Update(Agent* agent, float deltaTime) override;
+	virtual bool Update(Default::Agent* agent, float deltaTime) override;
 
-	void Draw(Agent* agent);	// for debug only
+	void Draw(Default::Agent* agent);	// for debug only
 
 private:
 	Vector2 SetAngle(Vector2 vector, float value);

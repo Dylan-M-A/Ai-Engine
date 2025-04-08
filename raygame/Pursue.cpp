@@ -4,7 +4,7 @@ Pursue::Pursue()
 {
 }
 
-bool Pursue::Update(Agent* agent, float deltaTime)
+bool Pursue::Update(Default::Agent* agent, float deltaTime)
 {
 	Vector2 j = Vector2Add(m_destination, m_position);
 	Vector2 v = Vector2Subtract(j, agent->GetPosition());

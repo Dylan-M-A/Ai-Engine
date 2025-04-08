@@ -1,16 +1,19 @@
 #include "raylib.h"
 #include "Agent.h"
+#include "BehaviorTree.h"
 
-int Start()
+void BehaviorTree::start()
 {
+    Scene::start();
+
     int screenWidth = 800;
     int screenHeight = 450;
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
     SetTargetFPS(60);
- 
-    Agent agent(100, 100);
+
+    Default::Agent agent(100, 100);
 
     float deltaTime = 0;
 
@@ -28,8 +31,10 @@ int Start()
 
         EndDrawing();
     }
-  
-    CloseWindow();        
 
-    return 0;
+    CloseWindow();
+}
+
+void BehaviorTree::update(float deltaTime)
+{
 }

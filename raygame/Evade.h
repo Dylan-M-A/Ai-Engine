@@ -3,13 +3,13 @@
 
 class Component;
 
-class  Evade : public Behaviour
+class  Evade : public Default::Behaviour
 {
 public:
 	Evade();
 	virtual ~Evade() {};
 
-	virtual bool Update(Agent* agent, float deltaTime) override;
+	virtual bool Update(Default::Agent* agent, float deltaTime) override;
 	void SetDestination(Vector2 destination) { m_destination = destination; }
 
 private:

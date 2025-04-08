@@ -3,13 +3,13 @@
 
 class Component;
 
-class Pursue : public Behaviour
+class Pursue : public Default::Behaviour
 {
 public:
 	Pursue();
 	virtual ~Pursue() {};
 
-	virtual bool Update(Agent* agent, float deltaTime) override;
+	virtual bool Update(Default::Agent* agent, float deltaTime) override;
 	void SetDestination(Vector2 destination) { m_destination = destination; }
 
 private:
