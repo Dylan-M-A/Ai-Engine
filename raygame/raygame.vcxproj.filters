@@ -101,9 +101,6 @@
     <ClCompile Include="AStarTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BehaviorTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DistanceCondition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -132,9 +129,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WanderBehavior.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FiniteTesting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -269,12 +263,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SteeringTest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FiniteTesting.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BehaviorTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
