@@ -58,30 +58,3 @@ namespace Default
 		m_behaviourList.push_back(behaviour);
 	}
 }
-
-DecisionTree::Agent::Agent(float x, float y)
-{
-
-}
-
-void AIForGames::Agent::GoTo(Vector2 point)
-{
-}
-
-void AIForGames::Agent::GoTo(Node* node)
-{
-}
-
-void AIForGames::Agent::SetNode(Node* node)
-{
-}
-
-bool AIForGames::Agent::PathComplete()
-{
-	return false;
-}
-
-AIForGames::Agent::Agent(NodeMap* _nodeMap, Behaviour* _behaviour)
-{
-
-}
