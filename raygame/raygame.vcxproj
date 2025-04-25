@@ -157,8 +157,12 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Evade.cpp" />
+    <ClCompile Include="Finite State Machine.cpp" />
+    <ClCompile Include="FiniteStateMachineList.cpp" />
+    <ClCompile Include="FiniteTesting.cpp" />
     <ClCompile Include="Flee.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="motor.cpp" />
     <ClCompile Include="Pathfinder\NodeMap.cpp" />
     <ClCompile Include="Pathfinder\PathAgent.cpp" />
     <ClCompile Include="pathfinder\PathFinding.cpp" />
@@ -189,6 +193,7 @@
     <ClInclude Include="List\Iterator.h" />
     <ClInclude Include="List\List.h" />
     <ClInclude Include="List\Node.h" />
+    <ClInclude Include="motor.h" />
     <ClInclude Include="Pathfinder\NodeMap.h" />
     <ClInclude Include="Pathfinder\PathAgent.h" />
     <ClInclude Include="Pathfinder\PathFinding.h" />

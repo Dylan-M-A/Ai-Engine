@@ -6,6 +6,7 @@
 #include "Actor.h"
 #include "AStarTest.h"
 #include "SteeringTest.h"
+#include "FiniteTesting.h"
 
 bool Engine::m_applicationShouldClose = false;
 Scene** Engine::m_scenes = new Scene*;
@@ -39,6 +40,9 @@ void Engine::start()
 	m_scenes[m_currentSceneIndex]->start();
 
 	m_currentSceneIndex = addScene(new SteeringTest());
+	m_scenes[m_currentSceneIndex]->start();
+
+	m_currentSceneIndex = addScene(new FiniteTesting());
 	m_scenes[m_currentSceneIndex]->start();
 
 	m_currentSceneIndex = 1;
