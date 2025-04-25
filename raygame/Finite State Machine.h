@@ -1,9 +1,8 @@
 #pragma once
 
-enum
+enum Steering
 {
-	CHASER,
-	RUNNER,
-	WANDER
+	Patrol,
+	Chasing
 };
 
