@@ -172,7 +172,9 @@
     <ClCompile Include="Seek.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="SteeringTest.cpp" />
+    <ClCompile Include="Test.cpp" />
     <ClCompile Include="Transform2D.cpp" />
+    <ClCompile Include="TreeBehavior.cpp" />
     <ClCompile Include="Wander.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +191,7 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Evade.h" />
     <ClInclude Include="Finite State Machine.h" />
+    <ClInclude Include="FiniteTesting.h" />
     <ClInclude Include="Flee.h" />
     <ClInclude Include="List\Iterator.h" />
     <ClInclude Include="List\List.h" />
@@ -203,6 +206,7 @@
     <ClInclude Include="Seek.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="SteeringTest.h" />
+    <ClInclude Include="Test.h" />
     <ClInclude Include="Transform2D.h" />
     <ClInclude Include="TreeBehavior.h" />
     <ClInclude Include="Wander.h" />

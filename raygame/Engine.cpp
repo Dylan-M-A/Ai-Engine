@@ -44,6 +44,9 @@ void Engine::start()
 
 	m_currentSceneIndex = addScene(new FiniteTesting());
 	m_scenes[m_currentSceneIndex]->start();
+	
+	m_currentSceneIndex = addScene(new TreeBehvaiorTesting());
+	m_scenes[m_currentSceneIndex]->start();
 
 	m_currentSceneIndex = 1;
 }

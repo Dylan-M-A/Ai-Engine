@@ -1,10 +1,15 @@
+#include "raylib.h"
+#include "Agent.h"
 #include "FiniteStateMachineList.h"
 
 #include <iostream>
 
+class Scene;
 
-int main()
+void FiniteTesting::start()
 {
+    Scene::start();
+
     fsm_list::start();
 
     Call call;
